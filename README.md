@@ -1,8 +1,30 @@
-# React + Vite
+# E_Commerce_Product_Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Netlify Deployed URL --> https://e-commerce-product-fe.netlify.app/
 
-Currently, two official plugins are available:
+Render Deployed URL --> https://e-commerce-product-backend.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend Source Code in GitHub --> https://github.com/IndiraRamalingam/E_Commerce_Product_Backend
+
+
+
+# Admin
+
+
+Admin can able to perform CRUD operation. Admin has access to view, create, delete and Edit the list of products in the database. Below is the only Login credential for Admin.
+
+Demo Credentials:
+Email --> admin@gmail.com
+Password --> admin@123
+
+
+# User
+
+
+User can able to login with their credentials and view the list of products available. If new User, they can register and login into the application. After Login only, User can able to add the product to cart and Proceed with Payment through RazorPay. Also, have an option to view their list of order details like order_id, Payment_id, Payment_status... 
+
+Demo Credentials:
+Email --> testuser@gmail.com
+Password --> test@123
+
+
