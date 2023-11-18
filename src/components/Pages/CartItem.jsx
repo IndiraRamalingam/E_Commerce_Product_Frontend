@@ -11,7 +11,7 @@ const CartItem = (props) => {
 
   return (
     <>
-    <NavBar />
+    
         <div className="cart-item ">
       <div className="product-image">
         <img src={image} alt={title} height={150} width={100}/>
@@ -33,7 +33,7 @@ const CartItem = (props) => {
         </button>
       </div>
     </div>
-    <Footer />
+    
     </>
   );
 };

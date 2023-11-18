@@ -3,6 +3,7 @@ import '../src/App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Pages/Home'
 import Contact from './components/Pages/Contact'
+import Products_home from './components/Pages/Products_home'
 import Products from './components/Pages/Products'
 import Product from './components/Pages/Product'
 import Cart from './components/Pages/Cart'
@@ -15,6 +16,7 @@ import AddProduct from './components/Admin/AddProduct'
 import EditProduct from './components/Admin/EditProduct'
 import ViewProduct from './components/Admin/ViewProduct'
 import AdminNavBar from './components/Admin/AdminNavBar'
+import Error from './components/Pages/Error'
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/products' element={<Products />} />
+              <Route path='/products_home' element={<Products_home/>}/>
               <Route path='/product' element={<Product />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/orderlist/:id' element={<OrderList/>} /> 
@@ -35,10 +38,11 @@ function App() {
               <Route path='/forgot_password' element={<ForgotPassword />} />
               <Route path='/reset_password/:token' element={<ResetPassword />} />
               <Route path='/addProduct' element={<AddProduct />} />
-              <Route path='/editProduct' element={<EditProduct />} />
+              <Route path='/editProduct/:id' element={<EditProduct />} />
               <Route path='/viewProduct' element={<ViewProduct />} />
               <Route path='/adminNavBar' element={<AdminNavBar />} />
-            </Routes>
+              <Route path='/error' element={<Error />} />
+              </Routes>
           </BrowserRouter>
         </div>
         

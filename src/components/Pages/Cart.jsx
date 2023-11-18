@@ -30,7 +30,8 @@ const Cart = () => {
 
 
     if (quantity === 0) {
-      return <h2 className="no-items">No items in cart...</h2>;
+      navigate('/error')
+      
     }
   
     //Razorpay Payment Gateway Integration

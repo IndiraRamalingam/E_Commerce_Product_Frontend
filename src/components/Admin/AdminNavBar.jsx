@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 
 function AdminNavBar() {
+  const navigate=useNavigate()
   return (
     <>
      <Navbar collapseOnSelect expand="lg" className='navigation'>
@@ -19,6 +20,13 @@ function AdminNavBar() {
             <Nav className="m-auto ">
               <Link to='/viewProduct' className='link-line'><p className='nav-links m-3 mt-4'>ADMIN DASHBOARD</p></Link>
             </Nav>
+
+
+            <div className='m-3'>
+            <button className='btn btn-success' onClick={() => {
+                        navigate('/addProduct')
+                      }}>Add New Product</button>
+           </div>
 
            <div>
             <button className='btn btn-danger' onClick={() => {

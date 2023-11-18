@@ -59,7 +59,7 @@ const Product = ({ id, image, title, price, rate, count, Brand, category, descri
               <i className="rating__star far fa-star"></i>
               <i className="rating__star far fa-star"></i>
               <i className="rating__star far fa-star"></i>
-              <span style={{ color: 'blue' }}> ({count} ratings) </span>
+              <span style={{ color: 'blue' }}> ({count} reviews) </span>
             </div>
             <div className='row'>
               <div className='col-sm-6'>

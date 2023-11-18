@@ -1,7 +1,7 @@
 import React from 'react'
-import Products from './Products'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import Products_home from './Products_home'
 
 function Home() {
   return (
@@ -22,7 +22,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Products />
+      <Products_home/>
       <Footer />
     </>
   )

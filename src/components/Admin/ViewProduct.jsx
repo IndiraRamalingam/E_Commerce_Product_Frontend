@@ -7,21 +7,36 @@ import Footer from '../Pages/Footer'
 function ViewProduct() {
   const [productData, setProductData] = useState([]);
   const navigate = useNavigate();
+  const [alarm, setAlarm] = useState(false);
 
   useEffect(() => {
     getAllProducts()
-  }, [])
+  }, [alarm])
 
   const getAllProducts = async () => {
     try {
       const response = await instance.authInstance.get(`/admin/allProducts`);
       setProductData(response.data)
-      console.log(response.data)
+      //console.log(response.data)
     }
     catch (error) {
       console.log("Error in fetching Data ", error)
     }
   }
+
+  const deleteProduct = async(id) =>{
+    try{
+        let response=await instance.protectedInstance.delete(`/admin/deleteProduct/${id}`)
+        if(response.status==200)
+        {
+            setAlarm(true);
+        }
+    }
+    catch(error)
+    {
+        console.log("Error in deleting doctor ", error)
+    }
+}
 
   return (
     <>
@@ -46,16 +61,20 @@ function ViewProduct() {
                          <i className="rating__star far fa-star"></i>
                          <i className="rating__star far fa-star"></i>
                          <i className="rating__star far fa-star"></i>
-                         <span style={{ color: 'blue' }}> ({e.count} ratings) </span>
+                         <span style={{ color: 'blue' }}> ({e.count} reviews) </span>
                        </div>
                        <div className='row'>
                          <div className='col-sm-6'>
-                             <button className='btn btn-warning'>
+                             <button className='btn btn-warning' onClick={() => {
+                                               navigate(`/editProduct/${e._id}`)
+                                            }}>
                              Edit <i class="fa fa-pencil" aria-hidden="true"></i>  
                            </button>
                          </div>
                          <div className='col-sm-6'>
-                             <button className='btn btn-danger'>
+                             <button className='btn btn-danger'  onClick={() => {
+                                                deleteProduct(e._id);
+                                            }}>
                              Delete <i class="fa fa-trash" aria-hidden="true"></i> 
                            </button>
                          </div>
