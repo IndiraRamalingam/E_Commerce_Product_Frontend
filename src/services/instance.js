@@ -1,7 +1,7 @@
 import axios from "axios";
 
-//const baseURL='https://e-commerce-dcpc.onrender.com/api'
-const baseURL='http://localhost:3001/api'
+const baseURL='https://e-commerce-product-backend.onrender.com/api'
+//const baseURL='http://localhost:3001/api'
 
 const authInstance= axios.create({
     baseURL : baseURL,
