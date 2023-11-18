@@ -1,4 +1,4 @@
-# Hospital Management CRM
+# E_Commerce_Product_Frontend
 
 Netlify Deployed URL --> https://e-commerce-product-fe.netlify.app/
 
