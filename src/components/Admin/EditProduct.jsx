@@ -224,7 +224,7 @@ function EditProduct() {
   </div >
 </div >
     <Footer />
-    <Footer/>
+
     </>
   )
 }
