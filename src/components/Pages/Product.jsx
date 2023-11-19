@@ -28,7 +28,7 @@ const Product = ({ id, image, title, price, rate, count, Brand, category, descri
     if (name.length == 0) {
       getName();
      // console.log("NAME " + name)
-     alert("Please Login to Continue....                                                                          User Credentails....                                                                  Email : testuser@gmail.com                       Password : test@123   Admin Credentails....                                                                  Email : admin@gmail.com                       Password : admin@123")
+      alert("Please Login to Continue....                                                                 User Credentails....                                                                  Email : testuser@gmail.com                       Password : test@123   Admin Credentails....                                                                  Email : admin@gmail.com                       Password : admin@123")
     }
     else {
       dispatch(addToCart({ id, image, title, price }))
