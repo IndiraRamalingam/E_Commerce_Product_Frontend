@@ -153,7 +153,7 @@ function AddProduct() {
                                 <div className='col-sm-6'>
                                   <div className="form-outline mb-4">
                                     <select required className="form-select form-select-lg mb-3" onChange={(e) => setCategory(e.target.value)}>
-                                      <option value="" disabled >--Category--</option>
+                                      <option value="" disabled selected>--Category--</option>
                                       <option value="Men's clothing" >Men's clothing</option>
                                       <option value="Electronics">Electronics</option>
                                       <option value="Women's clothing">Women's clothing</option>
@@ -164,7 +164,7 @@ function AddProduct() {
                                 <div className='col-sm-6'>
                                   <div className="form-outline mb-4">
                                     <select required className="form-select form-select-lg mb-3" onChange={(e) => setStock(e.target.value)}>
-                                      <option value="" disabled>--Stock--</option>
+                                      <option value="" disabled selected>--Stock--</option>
                                       <option  value="In Stock">In Stock</option>
                                       <option value="Out Of Stock">Out Of Stock</option>
                                     </select>
