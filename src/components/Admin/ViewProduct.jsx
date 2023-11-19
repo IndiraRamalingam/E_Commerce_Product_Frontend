@@ -56,11 +56,9 @@ function ViewProduct() {
                        </p>
                        <div className="rating mb-4">
                          <span>{e.rate} </span>
-                         <i className="rating__star far fa-star"></i>
-                         <i className="rating__star far fa-star"></i>
-                         <i className="rating__star far fa-star"></i>
-                         <i className="rating__star far fa-star"></i>
-                         <i className="rating__star far fa-star"></i>
+                         <div style={{display:'inline','fontSize':'20px'}}>
+                            <i data-star={e.rate}></i>
+                            </div>
                          <span style={{ color: 'blue' }}> ({e.count} reviews) </span>
                        </div>
                        <div className='row'>

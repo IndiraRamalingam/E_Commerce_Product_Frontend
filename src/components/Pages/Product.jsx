@@ -36,9 +36,6 @@ const Product = ({ id, image, title, price, rate, count, Brand, category, descri
     }
   }
 
-  const rateFunction = ({ rate }) => {
-    // console.log(rate)
-  }
   return (
     <>
 
@@ -52,15 +49,16 @@ const Product = ({ id, image, title, price, rate, count, Brand, category, descri
               <span style={{ fontSize: "16px" }} onClick={handleShow}>₹ </span>
               {price}
             </p>
-            <div className="rating mb-4" onLoad={rateFunction({ rate })} onClick={handleShow}>
+            <div className="rating mb-4" onClick={handleShow}>
               <span>{rate} </span>
-              <i className="rating__star far fa-star"></i>
-              <i className="rating__star far fa-star"></i>
-              <i className="rating__star far fa-star"></i>
-              <i className="rating__star far fa-star"></i>
-              <i className="rating__star far fa-star"></i>
+              <div style={{display:'inline','fontSize':'20px'}}>
+              <i data-star={rate}></i>
+              </div>
               <span style={{ color: 'blue' }}> ({count} reviews) </span>
             </div>
+
+            
+
             <div className='row'>
               <div className='col-sm-6'>
                   <button className='btn btncolorcart' onClick={addtocart}>
@@ -108,13 +106,11 @@ const Product = ({ id, image, title, price, rate, count, Brand, category, descri
                               {price}
                             </p> 
                             <p>{category} - <span style={{color:'green'}}>{stock}</span></p>
-                            <div className="rating mb-4" onLoad={rateFunction({ rate })} onClick={handleShow}>
+                            <div className="rating mb-4" onClick={handleShow}>
                               <span>{rate} </span>
-                              <i className="rating__star far fa-star"></i>
-                              <i className="rating__star far fa-star"></i>
-                              <i className="rating__star far fa-star"></i>
-                              <i className="rating__star far fa-star"></i>
-                              <i className="rating__star far fa-star"></i>
+                              <div style={{display:'inline','fontSize':'20px'}}>
+                                <i data-star={rate}></i>
+                                </div>
                               <span style={{ color: 'blue' }}> ({count} ratings) </span>
                             </div>
                             <p>{description}</p>
