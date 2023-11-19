@@ -80,7 +80,7 @@ function NavBar() {
               ) : (
                 <Link to='/signin'>
                   <a className="btn btncolorlogin m-3" onClick={() => {
-                   alert("Please Login to Continue....                                                                           User Credentails....                                                                  Email : testuser@gmail.com                       Password : test@123   Admin Credentails....                                                                  Email : admin@gmail.com                       Password : admin@123")
+                   alert("Please Login to Continue....                                                              User Credentails....                                                                  Email : testuser@gmail.com                       Password : test@123   Admin Credentails....                                                                  Email : admin@gmail.com                       Password : admin@123")
                   }}
                   ><span style={{ fontWeight: 'bold' }}>Login</span>  <i className="fa-solid fa-right-to-bracket"></i></a>
                 </Link>
